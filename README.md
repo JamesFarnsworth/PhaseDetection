@@ -7,7 +7,9 @@ Phase is detected via a (real) fast Fourier transform (provided by NumPy), with 
 
 This program also uncovered a systematic experimental error in our spectrometer. The detected signal has both quadrature and in-phase components, which ought to have a phase difference of -0.5 pi (the same as 1.5 pi), however this is closer to -0.45 pi (the same as 1.55 pi), as can be seen from running the program with the demo data. This could be, for instance, due to a difference in cable lengths.
 
-The program takes input data from a MATLAB .mat data file containing in_phase_echo and quadrature_echo columns. One such file (200MHz Sine - BDPA.mat), from measurements of a BDPA sample, is provided.
+The program takes input data from a MATLAB .mat data file containing in_phase_echo and quadrature_echo columns. One such file (200MHz Sine - BDPA.mat), from measurements of a BDPA sample, is provided. This file format is used because it can easily be saved and loaded using the SciPy.io library, but still allows quick plotting and analysis using MATLAB.
+
+Sample output data from the program, using the demo data, can be found in "Sample output.png".
 
 
 Dependencies:
