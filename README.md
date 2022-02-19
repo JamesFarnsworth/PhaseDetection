@@ -1,5 +1,5 @@
 # PhaseDetection
-A simple program to detect and compensate for the phase of a spin echo.
+A simple program to detect the phase of a spin echo signal.
 
 This was created during my Masters' project. It allows for detection of the phase of a spin-echo signal (a wave pulse) from a spectrometer, which is an important parameter to determine, as it confirms the sample is responding in the intended way, and can provide information about its resonance characteristics.
 
