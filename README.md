@@ -9,6 +9,7 @@ The program takes input data from a MATLAB .mat data file containing in_phase_ec
 
 
 Dependencies:
-NumPy
-Matplotlib.PyPlot
-loadmat from SciPy.io
+
+NumPy,
+Matplotlib.PyPlot,
+loadmat from SciPy.io,
