@@ -126,17 +126,21 @@ avg_quadrature_difference = np.mean(quadrature_difference)
 print('Average difference (quadrature - in-phase) in units of pi = %s \n' % str(avg_quadrature_difference / np.pi))
 
 
-#display the jth echo signal just as a sanity check
+#display the jth echo signal as a check the signal looks as expected
 j=13 #unlucky for some...
 plt.figure()
-plt.plot(t, in_phase_echo[j,:], t, quadrature_echo[j,:])
+plt.plot(t, in_phase_echo[j,:], '-b', label='In-phase')
+plt.plot(t, quadrature_echo[j,:], '-g', label='Quadrature')
+plt.legend()
 plt.xlabel('Time / ns')
 plt.ylabel('Echo amplitude')
 plt.title('Echo number ' + str(j))
 
 echo_number = np.arange(1, len(phases_from_in_phase_signal) + 1)
 plt.figure()
-plt.plot(echo_number, phases_from_in_phase_signal, echo_number, phases_from_quadrature_signal)
+plt.plot(echo_number, phases_from_in_phase_signal, '-b', label='In-phase')
+plt.plot(echo_number, phases_from_quadrature_signal, '-g', label='Quadrature')
+plt.legend()
 plt.xlabel('Echo number')
 plt.ylabel('Detected phase / rad')
 
